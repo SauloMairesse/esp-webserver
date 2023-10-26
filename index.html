@@ -1,0 +1,25 @@
+<script language = "JavaScript">
+    function formToJson(form){
+         
+        var pass = form.pass.value;
+        var ssid = form.ssid.value;
+         
+        var jsonFormInfo = JSON.stringify({
+            pass:pass, 
+            ssid: ssid
+        });
+ 
+        window.alert(jsonFormInfo);
+         
+    }
+</script>
+ 
+<form onSubmit = "event.preventDefault(); formToJson(this);">
+    <label class="label">Network Name</label>
+    <input type = "text" name = "ssid"/>
+    <br/>
+    <label>Password</label>
+    <input type = "text" name = "pass"/>
+    <br/>
+    <input type="submit" value="Submit">
+</form>
